@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+  liho:
+    container_name: liho-docker-image-php-ubuntu
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /code
+    ports:
+      - "80:80"
+      - "8000:8000"
+      - "9000:9000"
+    volumes:
+      - ./:/code
